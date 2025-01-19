@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service OpenAIService {
+    rpc BasicChat(BasicChatParams) returns (BasicChatResponse) {}
+}
+
+message BasicChatParams {
+    string prompt = 1;
+    string system_message = 2;
+}
+
+message BasicChatResponse {
+    string response = 1;
+}
